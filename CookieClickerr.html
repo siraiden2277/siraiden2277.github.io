@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cookie Clicker</title>
+    <style>
+        body {
+            font-family: 'Impact', cursive, sans-serif;
+        }
+
+        #time {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cookie-container">
+        <button id="cookie" onclick="clickCookie()">Click me!</button>
+        <span id="cookies">0 cookies</span>
+    </div>
+
+    <div id="store-container">
+        <h2>Store</h2>
+        <button onclick="buyClickUpgrade()">Buy Click Upgrade (+1 cookie per click)</button>
+        <button onclick="buyAutoClick()">Buy Auto Clicker (Auto-clicks for you)</button>
+    </div>
+
+    <div id="time"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to update the time
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+
+            // Display the time in the 'time' div
+            document.getElementById('time').innerText = `Current Time: ${timeString}`;
+
+            // Update the time every second
+            setTimeout(updateTime, 1000);
+        }
+
+        // Call the updateTime function to start updating the time
+        updateTime();
+    </script>
+</body>
+</html>

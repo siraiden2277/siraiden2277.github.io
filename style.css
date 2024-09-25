@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('https://preppykitchen.com/wp-content/uploads/2023/04/Peanut-Butter-Chocolate-Chip-Cookies-Recipe-Card.jpg') no-repeat center center fixed; /* Replace 'YOUR_IMAGE_URL' with the actual URL of your background image */
+    background-size: cover;
+}
+
+#cookie-container {
+    text-align: center;
+}
+
+#cookie {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white background */
+    background-image: url('https://i.pinimg.com/736x/06/dd/6c/06dd6c7c83fdc8f5ab96db92955f5ae9.jpg'); /* Replace 'cookie.png' with your cookie image */ 
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+#cookies {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#store-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
